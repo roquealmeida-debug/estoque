@@ -22,7 +22,7 @@ document.getElementById('form-medicamento').addEventListener('submit', function 
     const validade = document.getElementById('validade').value;
     const valorLote = document.getElementById('valorLote').value;
     const lote = document.getElementById('lote').value;
-    const valorTotal = quantidade * valorLote;
+    const valorTotal = (quantidade * valorLote).toFixed(2); // Formata o valor total
 
     const editIndex = document.getElementById('edit-index').value;
 
@@ -159,8 +159,8 @@ function updateEstoqueDisplay() {
                         <td>${lote.lote}</td>
                         <td>${lote.quantidade}</td>
                         <td>${lote.validade}</td>
-                        <td>R$${lote.valorLote}</td>
-                        <td>R$${lote.valorTotal}</td>
+                        <td>R$${parseFloat(lote.valorLote).toFixed(2)}</td>
+                        <td>R$${parseFloat(lote.valorTotal).toFixed(2)}</td>
                         <td>
                             <button onclick="editarMedicamento('${medicamento}', ${index})">Editar</button>
                             <button onclick="excluirMedicamento('${medicamento}', ${index})">Excluir</button>

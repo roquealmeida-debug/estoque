@@ -23,13 +23,31 @@
             <input type="text" id="laboratorio" required>
             <datalist id="laboratorios"></datalist>
         </div>
-        <div>
-            <label for="tipoServico">Tipo de Serviço:</label>
-            <input type="text" id="tipoServico" required>
-        </div>
+        <label for="tipoServico">Tipo de Serviço:</label>
+        <select id="tipoServico" required>
+            <option value="">Selecione um tipo de serviço...</option>
+            <option value="ASSISTÊNCIA FARMACÊUTICA">ASSISTÊNCIA FARMACÊUTICA</option>
+            <option value="ASSISTÊNCIA FARMACÊUTICA BÁSICA">ASSISTÊNCIA FARMACÊUTICA BÁSICA</option>
+            <option value="URGÊNCIA E EMERGÊNCIA">URGÊNCIA E EMERGÊNCIA</option>
+            <option value="ANEMIA FALCIFORME">ANEMIA FALCIFORME</option>
+            <option value="SAÚDE MENTAL">SAÚDE MENTAL</option>
+            <option value="ANTIMICROBIANOS">ANTIMICROBIANOS</option>
+            <option value="HIPERTENSÃO">HIPERTENSÃO</option>
+            <option value="SAÚDE DA MULHER">SAÚDE DA MULHER</option>
+            <option value="DIABETES">DIABETES</option>
+        </select>
         <div>
             <label for="tipoMedicamento">Tipo de Medicamento:</label>
-            <input type="text" id="tipoMedicamento" required>
+            <select id="tipoMedicamento" required>
+                <option value="">Selecione um tipo de medicamento...</option>
+                <option value="Frasco">Frasco</option>
+                <option value="Capsula">Cápsula</option>
+                <option value="Cartela">Cartela</option>
+                <option value="Ampola">Ampola</option>
+                <option value="Bisnaga">Bisnaga</option>
+                <option value="Frasco Ampola">Frasco Ampola</option>
+                <!-- Adicione mais opções se necessário -->
+            </select>
         </div>
         <div>
             <label for="quantidade">Quantidade:</label>

@@ -117,7 +117,7 @@ button:hover {
 
 #estoque th, #estoque td {
     padding: 10px;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: center; /* Alinha o texto ao centro */
     border-bottom: 1px solid #ddd;
 }
 
@@ -241,8 +241,8 @@ tr:hover {
         --background-color: #181818;
         --text-color: #e0e0e0;
         --form-background: #282828;
-        --button-background: #505050;
-        --button-hover: #383838;
+        --button-background: #007bff;
+        --button-hover: #0056b3;
         --medicamento-background: #282828;
         --detalhes-background: #383838;
         --laboratorio-background: #383838;

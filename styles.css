@@ -1,0 +1,253 @@
+/* Estilos Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Modo Claro (Padrão) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --form-background: #f4f4f4;
+    --button-background: #007bff;
+    --button-hover: #0056b3;
+    --medicamento-background: #f9f9f9;
+    --detalhes-background: #ffffff;
+    --laboratorio-background: #eeeeee;
+    --input-background: #ffffff; /* Alterado para branco para modo claro */
+    --input-border-color: #ddd; /* Cor da borda para inputs */
+    --notification-background: #fff3cd; /* Cor de fundo da notificação */
+    --notification-color: #856404; /* Cor do texto da notificação */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+form {
+    background: var(--form-background);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+form input, form select {
+    width: calc(100% - 20px);
+    padding: 10px; /* Aumentado para melhor acessibilidade */
+    margin-bottom: 15px; /* Aumentado para maior espaçamento */
+    border: 1px solid var(--input-border-color); /* Usando a cor da borda definida */
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    box-sizing: border-box; /* Para alinhar o padding corretamente */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px; /* Aumentado para maior área de clique */
+    background-color: var(--button-background);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adicionando transição suave */
+}
+
+/* Estilos para botões de exportação */
+.export-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaço superior para separar dos elementos acima */
+}
+
+.export-buttons button {
+    margin: 0 5px; /* Espaçamento entre os botões */
+    padding: 5px 8px; /* Reduzido para diminuir o tamanho do botão */
+    background-color: var(--button-background); /* Cor do botão alterada para verde */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.export-buttons button:hover {
+    background-color: var(--button-hover); /* Cor do botão ao passar o mouse */
+}
+
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Estilos para a tabela de estoque */
+#estoque {
+    max-width: 100%; /* Para ocupar 100% da largura disponível */
+    margin: 20px auto;
+    background: var(--medicamento-background);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: auto; /* Permite rolagem apenas se necessário */
+}
+
+#estoque table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+#estoque th, #estoque td {
+    padding: 10px;
+    text-align: left; /* Alinha o texto à esquerda */
+    border-bottom: 1px solid #ddd;
+}
+
+#estoque th {
+    background-color: var(--form-background);
+    color: var(--text-color);
+}
+
+#estoque td {
+    background-color: var(--detalhes-background);
+    color: var(--text-color);
+}
+
+.medicamento {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 15px; /* Espaçamento entre medicamentos */
+    display: flex; /* Flexbox para alinhar o conteúdo interno */
+    flex-direction: column; /* Organiza os detalhes verticalmente */
+    align-items: flex-start; /* Alinhamento à esquerda */
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.medicamento h3 {
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+}
+
+.medicamento .laboratorio {
+    padding: 10px;
+    background-color: var(--laboratorio-background);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    width: 100%; /* Garante que ocupe toda a largura */
+}
+
+.medicamento .detalhes p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.medicamento .detalhes {
+    padding: 10px;
+    background: var(--detalhes-background);
+    border-radius: 4px;
+    width: 100%; /* Garante que ocupe toda a largura */
+}
+
+/* Estilos para filtros */
+.filters {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--form-background); /* Fundo claro para a seção de filtros */
+    padding: 10px; /* Padding para espaço interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+#search-bar,
+#filter-laboratorio,
+#filter-quantidade {
+    padding: 8px;
+    border: 1px solid var(--input-border-color); /* Usar a cor de borda definida */
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+
+#search-bar {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#filter-laboratorio {
+    margin-right: 10px;
+}
+
+.filter-quantidade {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o label e o input */
+}
+
+.filter-quantidade label {
+    margin-right: 5px; /* Espaço entre o label e o input */
+    color: var(--text-color);
+}
+
+#filter-quantidade {
+    width: 80px; /* Define uma largura fixa para o campo de quantidade */
+    padding: 8px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    text-align: center; /* Centraliza o texto dentro do input */
+}
+
+/* Estilos para notificações */
+#notificacao-vencimento {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--notification-background);
+    color: var(--notification-color);
+    border: 1px solid var(--notification-color);
+    border-radius: 4px;
+    display: none; /* Inicialmente oculto */
+    font-size: 1em; /* Tamanho de fonte padrão */
+}
+
+/* Modo Escuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #181818;
+        --text-color: #e0e0e0;
+        --form-background: #282828;
+        --button-background: #505050;
+        --button-hover: #383838;
+        --medicamento-background: #282828;
+        --detalhes-background: #383838;
+        --laboratorio-background: #383838;
+        --input-background: #333333; /* Adicionando fundo de entrada para modo escuro */
+        --notification-background: #856404; /* Cor de fundo da notificação no modo escuro */
+        --notification-color: #fff; /* Cor do texto da notificação no modo escuro */
+    }
+}
